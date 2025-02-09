@@ -1,33 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Irfan Khan - Dropout, atheist, building harry ai (api for human intelligence). Experience includes Circle Market, autonomous vision projects, and more.">
-    <meta name="keywords" content="irfan khan, harry ai, circle market, entrepreneur, artificial intelligence">
-    <meta name="author" content="Irfan Khan">
-    <meta property="og:title" content="Irfan Khan - Building Harry AI">
-    <meta property="og:description" content="Dropout, atheist, building harry ai (api for human intelligence)">
+    <title>Irfan Khan - Developer & Entrepreneur | Harry AI Founder</title>
+    <meta name="description" content="Irfan Khan is a tech entrepreneur building Harry AI, an API for human intelligence. Former founder of Circle Market and Stanford admittee.">
+    <meta name="keywords" content="Irfan Khan, Harry AI, Circle Market, entrepreneur, developer, Stanford">
+    <meta property="og:title" content="Irfan Khan - Developer & Entrepreneur">
+    <meta property="og:description" content="Building Harry AI - API for human intelligence">
     <meta property="og:type" content="website">
-    <title>Irfan Khan - Building Harry AI</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
       body {
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         line-height: 1.5;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         color: #2D3748;
-        margin: 0;
-        padding: 0;
-      }
-      .container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 0 1.5rem;
       }
       h1 {
         font-weight: 700;
@@ -43,87 +35,86 @@
       }
       .desc {
         line-height: 1.8;
-        margin: 1rem 0;
+        font-size: 1rem;
       }
       .timespan {
-        font-family: 'Inter', monospace;
+        font-family: 'SF Mono', 'Consolas', monospace;
         font-size: 0.75rem;
         text-transform: uppercase;
-        font-weight: 600;
         color: #718096;
+        letter-spacing: 0.05em;
       }
-      #dhead {
+      .about-section {
+        max-width: 800px;
         margin: 3rem auto;
+        padding: 0 1.5rem;
+      }
+      .about-content {
+        font-size: 1rem;
+        color: #4A5568;
+        padding: 2rem 0;
+        line-height: 1.75;
+        text-align: center;
+      }
+      .about-fantasy {
+        font-style: italic;
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #E2E8F0;
+      }
+      .about-real {
+        margin-top: 2rem;
+      }
+      hr {
+        margin: 3rem auto;
+        border: none;
+        border-top: 1px solid #E2E8F0;
+        max-width: 800px;
+      }
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
       }
       .row {
         display: flex;
         align-items: flex-start;
-        gap: 2rem;
         margin: 1.5rem 0;
       }
-      #dpic {
-        flex-shrink: 0;
-      }
       .ppic {
-        width: 120px;
-        height: 120px;
-        border-radius: 60px;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
         object-fit: cover;
       }
       .iico {
         width: 24px;
         height: 24px;
         margin-right: 1rem;
-        opacity: 0.8;
-        transition: opacity 0.2s;
       }
-      .iico:hover {
-        opacity: 1;
-      }
-      .about-section {
-        max-width: 800px;
-        margin: 2rem auto;
-        padding: 0 1.5rem;
-      }
-      .about-content {
-        font-size: 1rem;
-        color: #4A5568;
-        padding: 1.5rem 0;
-        line-height: 1.6;
-        text-align: center;
-      }
-      .about-fantasy {
-        font-style: italic;
-        margin-bottom: 1.5rem;
-        padding-bottom: 1.5rem;
-        border-bottom: 1px solid #E2E8F0;
+      #dico {
+        margin-top: 1rem;
       }
       .entry {
-        margin: 2rem 0;
+        margin-bottom: 2.5rem;
       }
       .entry-dot {
         width: 12px;
         height: 12px;
-        background: #CBD5E0;
+        background: #4A5568;
         border-radius: 50%;
-        margin: 0.5rem 0;
+        margin: 0.5rem 1rem;
       }
       .ico img {
-        margin-top: 1rem;
-      }
-      hr {
-        margin: 2rem auto;
-        border: none;
-        border-top: 1px solid #E2E8F0;
-        max-width: 800px;
+        margin: 0.5rem 0;
       }
       a {
-        color: #4299E1;
+        color: #2B6CB0;
         text-decoration: none;
-        transition: color 0.2s;
+        transition: color 0.2s ease;
       }
       a:hover {
-        color: #2B6CB0;
+        color: #2C5282;
       }
       .hassets {
         position: relative;
@@ -135,17 +126,9 @@
         border-radius: 8px;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
       }
-      @media (max-width: 640px) {
-        .row {
-          flex-direction: column;
-          gap: 1rem;
-        }
-        #dpic {
-          text-align: center;
-        }
-        .ppic {
-          width: 100px;
-          height: 100px;
+      @media (max-width: 768px) {
+        .container {
+          padding: 0 1rem;
         }
         h1 {
           font-size: 1.875rem;
@@ -153,9 +136,13 @@
         h2 {
           font-size: 1.125rem;
         }
+        .ppic {
+          width: 120px;
+          height: 120px;
+        }
       }
     </style>
-    <!-- Google Tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-M6Y92GM5V5"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -172,7 +159,7 @@
         </div>
         <div id="ddesc">
           <h1>Irfan Khan</h1>
-          <h2>dropout, atheist, building harry ai (api for human intelligence)</h2>
+          <h2>Dropout, atheist, building Harry AI (API for human intelligence)</h2>
           <div id="dico">
             <a href="https://www.linkedin.com/in/irrfaansaul" aria-label="LinkedIn Profile">
               <img src="https://i.pinimg.com/564x/6b/ab/30/6bab3017350ca04c6fa05569672bd31e.jpg" class="iico" alt="LinkedIn icon" />
@@ -191,49 +178,57 @@
     <div class="about-section">
       <div class="about-content">
         <div class="about-fantasy">
-          grew up in a jewish/muslim household, which basically means i learned to debug conflicts before i could debug code. turns out managing family expectations is surprisingly good training for handling neural network errors. who knew? 🤷‍♂️
+          Grew up in a Jewish/Muslim household, which basically means I learned to debug conflicts before I could debug code. Turns out managing family expectations is surprisingly good training for handling neural network errors. Who knew? 🤷‍♂️
         </div>
       </div>
     </div>
 
     <div id="history" class="container">
       <div class="entry row">
-        <div class="timespan">2025 -</div>
+        <div class="timespan">
+          2025 -
+        </div>
         <div class="ico">
           <div class="entry-dot"></div>
         </div>
         <div class="desc">
-          building harry ai (api for human intelligence).
+          Building Harry AI (API for human intelligence).
         </div>
       </div>
       <div class="entry row">
-        <div class="timespan">2023 - 2024</div>
+        <div class="timespan">
+          2023 - 2024
+        </div>
         <div class="ico">
           <div class="entry-dot"></div>
           <img src="https://identity.stanford.edu/wp-content/uploads/sites/3/2020/07/block-s-right.png" style="max-width: 32px;" alt="Stanford University logo"/>
         </div>
         <div class="desc">
-          was at bits pilani in 2023 for b.sc. in cs but dropped out after the 1st sem to work on <a href="https://www.circlemarket.in/">circle market</a> (prev. reprice) and explore things; got into stanford in 2024 for b.s. but decided to work on harry ai.
+          Was at BITS Pilani in 2023 for B.Sc. in CS but dropped out after the 1st sem to work on <a href="https://www.circlemarket.in/">Circle Market</a> (prev. Reprice) and explore things; got into Stanford in 2024 for B.S. but decided to work on Harry AI.
         </div>
       </div>
       <div class="entry row">
-        <div class="timespan">2021 - 2024</div>
+        <div class="timespan">
+          2021 - 2024
+        </div>
         <div class="ico">
           <div class="entry-dot"></div>
           <img src="https://www.circlemarket.in/images/logo.png" style="max-width: 32px;" alt="Circle Market logo"/>
         </div>
         <div class="desc">
-          started <a href="https://www.circlemarket.in/">circle market</a> (prev. reprice), a re-commerce platform to sell used gadgets instantly across india. started when i was 16, did some crazy revenue, but recently closed due to declining profit margins.
+          Started <a href="https://www.circlemarket.in/">Circle Market</a> (prev. Reprice), a re-commerce platform to sell used gadgets instantly across India. Started when I was 16, did some crazy revenue, but recently closed due to declining profit margins.
         </div>
       </div>
       <div class="entry row">
-        <div class="timespan">2022 - 2023</div>
+        <div class="timespan">
+          2022 - 2023
+        </div>
         <div class="ico">
           <div class="entry-dot"></div>
-          <img src="https://media.istockphoto.com/id/1373671767/vector/autopilot-icon-simple-element-illustration-autopilot-symbol-design-from-artificial.jpg?s=612x612&w=0&k=20&c=DzMuRemEV45K1tKzGd1a_mvifyLoOfrxlN3BRqUJEP8=" style="max-width: 32px;" alt="Autopilot icon"/>
+          <img src="https://media.istockphoto.com/id/1373671767/vector/autopilot-icon-simple-element-illustration-autopilot-symbol-design-from-artificial.jpg?s=612x612&w=0&k=20&c=DzMuRemEV45K1tKzGd1a_mvifyLoOfrxlN3BRqUJEP8=" style="max-width: 32px;" alt="Autopilot project icon"/>
         </div>
         <div class="desc">
-          worked on a few autonomous vision projects.
+          Worked on a few autonomous vision projects.
           <div class="hassets" style="height:304px; margin: 20px 0 10px 0;">
             <div class="hasset" style="top: 0; left: 0; width: 50%;">
               <video controls preload="metadata" muted loop playsinline class="video" width="100%">
@@ -244,33 +239,37 @@
         </div>
       </div>
       <div class="entry row">
-        <div class="timespan">2018 - 2020</div>
+        <div class="timespan">
+          2018 - 2020
+        </div>
         <div class="ico">
           <div class="entry-dot"></div>
         </div>
         <div class="desc">
-          back in school, worked as a stockbroker & opened demat accounts to fund my expenses.
+          Back in school, worked as a stockbroker & opened demat accounts to fund my expenses.
         </div>
       </div>
       <div class="entry row">
-        <div class="timespan">2009 - 2021</div>
+        <div class="timespan">
+          2009 - 2021
+        </div>
         <div class="ico">
           <div class="entry-dot"></div>
           <img src="https://sophiahighschool.org/images/logo2.png" style="max-width: 32px;" alt="Sophia School logo"/>
         </div>
         <div class="desc">
-          k12 - sophia school.
+          K12 - Sophia School.
         </div>
       </div>
     </div>
     <div class="container">
       <ul style="padding-left: 10px; padding-top: 40px;">
-        <li>no frameworks were used to make this simple responsive website because i am becoming seriously allergic to <a href="https://motherfuckingwebsite.com/" style="color: #0066cc; text-decoration: underline;">500-pound websites</a>. this one is pure html and css in two static files and that's it.</li>
+        <li>No frameworks were used to make this simple responsive website because I am becoming seriously allergic to <a href="https://motherfuckingwebsite.com/" style="color: #0066cc; text-decoration: underline;">500-pound websites</a>. This one is pure HTML and CSS in two static files and that's it.</li>
       </ul>
     </div>
     <script type="text/javascript">
       const rot13 = (message) => {
-        const alpha = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLM';
+        const alpha = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLM';
         return message.replace(/[a-z]/gi, letter => alpha[alpha.indexOf(letter) + 13]);
       }
       var e_is_shown = false;
