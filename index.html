@@ -1,10 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Irfan Khan - Dropout, atheist, making superintelligence / Harry AI">
-    <title>Irfan Khan</title>
+    <meta name="description" content="Irfan Khan - Dropout, Atheist, Making Superintelligence / Harry AI">
+    <meta name="keywords" content="Irfan Khan, Harry AI, Superintelligence, Circle Market, Stanford, BITS Pilani">
+    <meta name="author" content="Irfan Khan">
+    <title>Irfan Khan - Making Superintelligence</title>
     <style>
       body {
         margin: 0;
@@ -12,25 +14,27 @@
         background-color: white;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         font-size: 16px;
-        line-height: 1.5;
-        color: #333;
+        line-height: 1.6;
+        color: #2d3748;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
       }
 
       .container {
-        max-width: 970px;
+        max-width: 1000px;
         margin: 0 auto;
-        padding: 0 15px;
+        padding: 0 24px;
       }
 
       .row {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
+        gap: 20px;
       }
 
       #dhead {
-        margin-top: 20px;
+        margin-top: 40px;
+        margin-bottom: 40px;
       }
 
       #dpic {
@@ -40,128 +44,138 @@
 
       #ddesc {
         padding-top: 40px;
-        padding-left: 20px;
+        padding-left: 32px;
         grid-column: span 6;
       }
 
       .ppic {
-        width: 240px;
-        height: 240px;
+        width: 260px;
+        height: 260px;
         border-radius: 50%;
         object-fit: cover;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       }
 
       .iico {
         width: 32px;
         height: 32px;
-        margin: 0 8px;
-        opacity: 0.8;
-        transition: opacity 0.2s;
+        margin: 0 12px;
+        opacity: 0.85;
+        transition: all 0.2s ease;
       }
 
       .iico:hover {
         opacity: 1;
+        transform: translateY(-2px);
       }
 
       h1 {
-        font-size: 34px;
-        font-weight: 600;
+        font-size: 38px;
+        font-weight: 700;
         margin: 0;
+        color: #1a202c;
       }
 
       h2 {
-        font-weight: normal;
+        font-weight: 500;
         font-style: italic;
-        color: #666;
-        font-size: 18px;
-        margin: 5px 0 10px;
-        max-width: 300px;
+        color: #4a5568;
+        font-size: 20px;
+        margin: 12px 0 16px;
+        max-width: 340px;
+        line-height: 1.4;
       }
 
       .about-section {
-        max-width: 800px;
-        margin: 1.5rem auto;
-        padding: 0 1rem;
+        max-width: 840px;
+        margin: 2rem auto 3rem;
+        padding: 0 1.5rem;
       }
 
       .about-content {
-        font-size: 0.95rem;
-        color: #666;
-        padding: 1.5rem 0;
-        line-height: 1.6;
+        font-size: 1.05rem;
+        color: #4a5568;
+        padding: 2rem 0;
+        line-height: 1.7;
         text-align: center;
       }
 
       .about-fantasy {
         font-style: italic;
-        margin-bottom: 1.5rem;
-        padding-bottom: 1.5rem;
-        border-bottom: 1px solid #eee;
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #e2e8f0;
       }
 
       hr {
         height: 1px;
-        background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
-        margin: 20px 0;
+        background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.2), rgba(0,0,0,0));
+        margin: 32px 0;
         border: 0;
       }
 
       .entry {
-        margin-bottom: 20px;
+        margin-bottom: 32px;
       }
 
       .timespan {
         grid-column: span 1;
-        font-family: monospace;
+        font-family: "SF Mono", Menlo, Monaco, Consolas, monospace;
         font-size: 14px;
         text-align: right;
-        padding-right: 5px;
-        color: #999;
+        padding-right: 8px;
+        color: #718096;
+        font-weight: 500;
       }
 
       .ico {
         grid-column: span 1;
-        border-left: 2px solid #cfcfcf;
+        border-left: 2px solid #cbd5e0;
         position: relative;
+        margin-left: 4px;
       }
 
       .ico img {
-        border-radius: 5px;
+        border-radius: 6px;
         width: 32px;
-        margin-left: 10px;
+        margin-left: 16px;
       }
 
       .entry-dot {
         position: absolute;
         top: 0;
         left: -8px;
-        width: 10px;
-        height: 10px;
+        width: 12px;
+        height: 12px;
         border-radius: 50%;
-        background-color: #cfcfcf;
+        background-color: #cbd5e0;
         border: 2px solid white;
       }
 
       .desc {
         grid-column: span 10;
         font-size: 17px;
-        padding-left: 20px;
-        padding-bottom: 20px;
+        padding-left: 24px;
+        padding-bottom: 24px;
+        color: #2d3748;
+        line-height: 1.7;
       }
 
       .desc a {
-        color: #0066cc;
+        color: #3182ce;
         text-decoration: none;
+        transition: color 0.2s ease;
       }
 
       .desc a:hover {
+        color: #2c5282;
         text-decoration: underline;
       }
 
       .hassets {
         position: relative;
         height: 304px;
-        margin: 20px 0 10px;
+        margin: 24px 0 16px;
       }
 
       .hasset {
@@ -173,7 +187,8 @@
 
       .video {
         width: 100%;
-        border-radius: 4px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       }
 
       @media (max-width: 991px) {
@@ -184,29 +199,42 @@
         
         #ddesc {
           grid-column: span 12;
-          padding-top: 20px;
+          padding-top: 24px;
+          padding-left: 0;
           text-align: center;
         }
 
         h2 {
           max-width: none;
+          margin-left: auto;
+          margin-right: auto;
         }
 
         .hassets {
           display: none;
         }
+
+        .container {
+          padding: 0 20px;
+        }
       }
 
       .footer-note {
-        font-size: 14px;
-        color: #666;
-        margin: 40px 0;
-        padding-left: 10px;
+        font-size: 15px;
+        color: #4a5568;
+        margin: 48px 0;
+        padding-left: 12px;
+        line-height: 1.6;
       }
 
       .footer-note a {
-        color: #0066cc;
+        color: #3182ce;
         text-decoration: underline;
+        transition: color 0.2s ease;
+      }
+
+      .footer-note a:hover {
+        color: #2c5282;
       }
     </style>
   </head>
@@ -214,11 +242,11 @@
     <div id="dhead" class="container">
       <div class="row">
         <div id="dpic">
-          <img src="https://media.licdn.com/dms/image/v2/D5603AQH-hm6q2KSb3Q/profile-displayphoto-shrink_800_800/B56ZNxw6rAGgAc-/0/1732780470759?e=1740009600&v=beta&t=-5_1GK2U0Omcdz63ghc4K8Qib9-tqPdaCsHBuXQ6jM8" class="ppic" alt="Irfan Khan profile picture" />
+          <img src="irfan.png.JPG" class="ppic" alt="Irfan Khan" />
         </div>
         <div id="ddesc">
-          <h1>irfan khan</h1>
-          <h2>dropout, atheist, making superintelligence / harry ai</h2>
+          <h1>Irfan Khan</h1>
+          <h2>Dropout, Atheist, Making Superintelligence / Harry AI</h2>
           <div id="dico">
             <a href="https://www.linkedin.com/in/irrfaansaul" aria-label="LinkedIn Profile">
               <img src="https://i.pinimg.com/564x/6b/ab/30/6bab3017350ca04c6fa05569672bd31e.jpg" class="iico" alt="LinkedIn" />
@@ -236,7 +264,7 @@
     <div class="about-section">
       <div class="about-content">
         <div class="about-fantasy">
-          doing what i love doing everyday, wrote my first working code at 14, a spacecraft game built with cocos2d (full of bugs), but hey, that was the best feeling ever. grew up in a jewish/muslim family, so dinner table conversations were always exciting
+          Doing what I love doing everyday, wrote my first working code at 14, a spacecraft game built with Cocos2D (full of bugs), but hey, that was the best feeling ever. Grew up in a Jewish/Muslim family, so dinner table conversations were always exciting.
         </div>
       </div>
     </div>
@@ -248,7 +276,7 @@
           <div class="entry-dot"></div>
         </div>
         <div class="desc">
-          building harry ai (making superintelligence).
+          Building Harry AI (Making Superintelligence).
         </div>
       </div>
 
@@ -256,10 +284,10 @@
         <div class="timespan">2023 - 2024</div>
         <div class="ico">
           <div class="entry-dot"></div>
-          <img src="https://identity.stanford.edu/wp-content/uploads/sites/3/2020/07/block-s-right.png" alt="Stanford logo"/>
+          <img src="https://identity.stanford.edu/wp-content/uploads/sites/3/2020/07/block-s-right.png" alt="Stanford University Logo"/>
         </div>
         <div class="desc">
-          was at bits pilani in 2023 for b.sc. in cs but dropped out after the 1st sem to work on <a href="https://www.circlemarket.in/">circle market</a> (prev. reprice) and explore things; got into stanford in 2024 for b.s. but decided to work on harry ai.
+          Was at bits pilani in 2023 for bsc. in cs but dropped out after the 1st sem to work on <a href="https://www.camco.ltd/">Camco</a> (prev. Reprice) and explore things; got into stanford in 2024 for bs in cs but decided to work on Harry AI.
         </div>
       </div>
 
@@ -267,10 +295,10 @@
         <div class="timespan">2021 - 2024</div>
         <div class="ico">
           <div class="entry-dot"></div>
-          <img src="https://www.circlemarket.in/images/logo.png" alt="Circle Market logo"/>
+          <img src="https://www.circlemarket.in/images/logo.png" alt="Circle Market Logo"/>
         </div>
         <div class="desc">
-          started <a href="https://www.circlemarket.in/">circle market</a> (prev. reprice), a re-commerce platform to sell used gadgets instantly across india. started when i was 16, did some crazy revenue, but recently closed due to declining profit margins.
+          Started <a href="https://www.camco.ltd/">Camco</a> (prev. Reprice), a re-commerce platform to sell used gadgets instantly across India. Started when I was 16, did some crazy revenue, but recently closed due to declining profit margins.
         </div>
       </div>
 
@@ -278,10 +306,10 @@
         <div class="timespan">2022 - 2023</div>
         <div class="ico">
           <div class="entry-dot"></div>
-          <img src="https://media.istockphoto.com/id/1373671767/vector/autopilot-icon-simple-element-illustration-autopilot-symbol-design-from-artificial.jpg?s=612x612&w=0&k=20&c=DzMuRemEV45K1tKzGd1a_mvifyLoOfrxlN3BRqUJEP8=" alt="Autopilot icon"/>
+          <img src="https://media.istockphoto.com/id/1373671767/vector/autopilot-icon-simple-element-illustration-autopilot-symbol-design-from-artificial.jpg?s=612x612&w=0&k=20&c=DzMuRemEV45K1tKzGd1a_mvifyLoOfrxlN3BRqUJEP8=" alt="Autopilot Icon"/>
         </div>
         <div class="desc">
-          worked on a few autonomous vision projects.
+          Worked on a few autonomous vision projects.
           <div class="hassets">
             <div class="hasset">
               <video controls preload="metadata" muted loop playsinline class="video">
@@ -298,7 +326,7 @@
           <div class="entry-dot"></div>
         </div>
         <div class="desc">
-          back in school, worked as a stockbroker & opened demat accounts to fund my expenses.
+          Back in school, worked as a stockbroker & opened Demat accounts to fund my expenses.
         </div>
       </div>
 
@@ -306,17 +334,19 @@
         <div class="timespan">2009 - 2021</div>
         <div class="ico">
           <div class="entry-dot"></div>
-          <img src="https://sophiahighschool.org/images/logo2.png" alt="Sophia School logo"/>
+          <img src="https://sophiahighschool.org/images/logo2.png" alt="Sophia School Logo"/>
         </div>
         <div class="desc">
-          k12 - sophia school.
+          K12 - Sophia School.
         </div>
       </div>
     </div>
+    <br>
+    <br>
 
     <div class="container">
       <p class="footer-note">
-        no frameworks were used to make this simple responsive website because i am becoming seriously allergic to <a href="https://motherfuckingwebsite.com/">500-pound websites</a>. this one is pure html and css in a single file and that's it.
+        No frameworks were used to make this simple responsive website because I am becoming seriously allergic to <a href="https://motherfuckingwebsite.com/">500-pound websites</a>. This one is pure HTML and CSS in a single file and that's it.
       </p>
     </div>
   </body>
