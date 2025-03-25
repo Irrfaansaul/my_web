@@ -207,51 +207,51 @@
 
       @media (max-width: 991px) {
         .row {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
+          display: grid;
+          grid-template-columns: repeat(12, 1fr);
         }
 
         #dhead .row {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
+          display: grid;
+          grid-template-columns: repeat(12, 1fr);
         }
 
         #dpic {
-          width: 100%;
-          text-align: center;
-          justify-content: center;
-          margin-bottom: 20px;
+          grid-column: span 6;
+          text-align: left;
+          justify-content: flex-start;
         }
         
         #ddesc {
-          width: 100%;
+          grid-column: span 6;
           padding-top: 0;
           padding-left: 0;
-          align-items: center;
-          text-align: center;
+          align-items: flex-start;
+          text-align: left;
         }
 
-        h1, h2, #dico {
-          text-align: center;
-          justify-content: center;
+        h1, h2 {
+          text-align: left;
+        }
+
+        #dico {
+          justify-content: flex-start;
         }
 
         h2 {
-          max-width: none;
-          margin-left: auto;
-          margin-right: auto;
+          max-width: 340px;
+          margin-left: 0;
+          margin-right: 0;
         }
 
         .timespan {
-          text-align: center;
-          padding-right: 0;
+          text-align: right;
+          padding-right: 8px;
         }
 
         .desc {
-          text-align: center;
-          padding-left: 0;
+          text-align: left;
+          padding-left: 20px;
         }
 
         .hassets {
@@ -263,13 +263,13 @@
         }
 
         .entry {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
+          display: grid;
+          grid-template-columns: repeat(12, 1fr);
         }
 
         .ico {
-          display: none;
+          grid-column: span 1;
+          display: block;
         }
       }
 
@@ -279,7 +279,7 @@
         margin: 40px 0;
         padding-left: 10px;
         line-height: 1.6;
-        text-align: center;
+        text-align: left;
       }
 
       .footer-note a {
