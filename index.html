@@ -40,12 +40,18 @@
       #dpic {
         grid-column: span 6;
         text-align: right;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
       }
 
       #ddesc {
         padding-top: 32px;
         padding-left: 24px;
         grid-column: span 6;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
 
       .ppic {
@@ -74,6 +80,7 @@
         font-weight: 600;
         margin: 0;
         color: #1a202c;
+        text-align: left;
       }
 
       h2 {
@@ -84,6 +91,13 @@
         margin: 10px 0 14px;
         max-width: 340px;
         line-height: 1.4;
+        text-align: left;
+      }
+
+      #dico {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
       }
 
       .about-section {
@@ -193,22 +207,51 @@
 
       @media (max-width: 991px) {
         .row {
-          grid-template-columns: 1fr;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        #dhead .row {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
         }
 
         #dpic {
-          grid-column: 1;
+          width: 100%;
           text-align: center;
+          justify-content: center;
+          margin-bottom: 20px;
         }
         
         #ddesc {
-          grid-column: 1;
-          padding-top: 20px;
+          width: 100%;
+          padding-top: 0;
           padding-left: 0;
+          align-items: center;
+          text-align: center;
+        }
+
+        h1, h2, #dico {
+          text-align: center;
+          justify-content: center;
         }
 
         h2 {
           max-width: none;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .timespan {
+          text-align: center;
+          padding-right: 0;
+        }
+
+        .desc {
+          text-align: center;
+          padding-left: 0;
         }
 
         .hassets {
@@ -219,14 +262,14 @@
           padding: 0 16px;
         }
 
-        .timespan {
-          text-align: left;
-          padding-right: 0;
-          margin-bottom: 5px;
+        .entry {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
         }
 
-        .desc {
-          padding-left: 0;
+        .ico {
+          display: none;
         }
       }
 
@@ -236,6 +279,7 @@
         margin: 40px 0;
         padding-left: 10px;
         line-height: 1.6;
+        text-align: center;
       }
 
       .footer-note a {
