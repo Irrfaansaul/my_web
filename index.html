@@ -8,10 +8,6 @@
     <meta name="author" content="Irfan Khan">
     <title>Irfan Khan - Making Superintelligence</title>
     <style>
-      * {
-        box-sizing: border-box;
-      }
-
       body {
         margin: 0;
         padding: 0;
@@ -25,7 +21,6 @@
       }
 
       .container {
-        width: 100%;
         max-width: 1000px;
         margin: 0 auto;
         padding: 0 20px;
@@ -44,17 +39,19 @@
 
       #dpic {
         grid-column: span 6;
+        text-align: right;
         display: flex;
         justify-content: flex-end;
         align-items: center;
       }
 
       #ddesc {
+        padding-top: 32px;
+        padding-left: 24px;
         grid-column: span 6;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-left: 24px;
       }
 
       .ppic {
@@ -63,7 +60,6 @@
         border-radius: 50%;
         object-fit: cover;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        max-width: 100%;
       }
 
       .iico {
@@ -79,17 +75,10 @@
         transform: translateY(-2px);
       }
 
-      #dico {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        margin-top: 15px;
-      }
-
       h1 {
         font-size: 36px;
         font-weight: 600;
-        margin: 0 0 10px 0;
+        margin: 0;
         color: #1a202c;
         text-align: left;
       }
@@ -99,10 +88,16 @@
         font-style: italic;
         color: #4a5568;
         font-size: 19px;
-        margin: 0 0 14px 0;
+        margin: 10px 0 14px;
         max-width: 340px;
         line-height: 1.4;
         text-align: left;
+      }
+
+      #dico {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
       }
 
       .about-section {
@@ -210,12 +205,81 @@
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       }
 
+      @media (max-width: 991px) {
+        .row {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        #dhead .row {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        #dpic {
+          width: 100%;
+          text-align: center;
+          justify-content: center;
+          margin-bottom: 20px;
+        }
+        
+        #ddesc {
+          width: 100%;
+          padding-top: 0;
+          padding-left: 0;
+          align-items: center;
+          text-align: center;
+        }
+
+        h1, h2, #dico {
+          text-align: center;
+          justify-content: center;
+        }
+
+        h2 {
+          max-width: none;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .timespan {
+          text-align: center;
+          padding-right: 0;
+        }
+
+        .desc {
+          text-align: center;
+          padding-left: 0;
+        }
+
+        .hassets {
+          display: none;
+        }
+
+        .container {
+          padding: 0 16px;
+        }
+
+        .entry {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .ico {
+          display: none;
+        }
+      }
+
       .footer-note {
         font-size: 14px;
         color: #4a5568;
         margin: 40px 0;
         padding-left: 10px;
         line-height: 1.6;
+        text-align: center;
       }
 
       .footer-note a {
@@ -226,84 +290,6 @@
 
       .footer-note a:hover {
         color: #2c5282;
-      }
-
-      @media (max-width: 991px) {
-        .row {
-          grid-template-columns: 1fr;
-          gap: 20px;
-        }
-
-        #dhead .row {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
-
-        #dpic {
-          grid-column: span 1;
-          justify-content: center;
-          margin-bottom: 20px;
-        }
-
-        #ddesc {
-          grid-column: span 1;
-          padding-left: 0;
-          align-items: center;
-          text-align: center;
-        }
-
-        h1, h2 {
-          text-align: center;
-        }
-
-        #dico {
-          justify-content: center;
-        }
-
-        .timespan {
-          grid-column: span 1;
-          text-align: center;
-          padding-right: 0;
-        }
-
-        .ico {
-          grid-column: span 1;
-          border-left: none;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin-left: 0;
-        }
-
-        .desc {
-          grid-column: span 1;
-          padding-left: 0;
-          text-align: center;
-        }
-
-        .hassets {
-          display: none;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .container {
-          padding: 0 10px;
-        }
-
-        .ppic {
-          width: 200px;
-          height: 200px;
-        }
-
-        h1 {
-          font-size: 28px;
-        }
-
-        h2 {
-          font-size: 16px;
-        }
       }
     </style>
   </head>
