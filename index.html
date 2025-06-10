@@ -11,13 +11,14 @@
       body {
         margin: 0;
         padding: 0;
-        background-color: white;
+        background-color: #fcfcfc;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-        font-size: 15px;
-        line-height: 1.6;
+        font-size: 16px;
+        line-height: 1.7;
         color: #2d3748;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        letter-spacing: -0.011em;
       }
 
       .container {
@@ -68,6 +69,7 @@
         margin: 0 10px;
         opacity: 0.85;
         transition: all 0.2s ease;
+        position: relative;
       }
 
       .iico:hover {
@@ -75,23 +77,119 @@
         transform: translateY(-2px);
       }
 
+      .iico:hover::after {
+        content: '';
+        position: absolute;
+        top: -120px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 100px;
+        background-image: url('https://media.licdn.com/dms/image/v2/D562DAQFQ5wvBeJmYEg/profile-treasury-image-shrink_1280_1280/B56ZYjW811GoAQ-/0/1744349942308?e=1750186800&v=beta&t=TlFNT2nmXKSWM9MhFOse0O833E5bIvsfLVFIafZ2Tpc');
+        background-size: cover;
+        border-radius: 50%;
+        border: 2px solid white;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        z-index: 1000;
+        opacity: 0;
+        animation: fadeIn 0.3s ease forwards;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateX(-50%) translateY(10px); }
+        to { opacity: 1; transform: translateX(-50%) translateY(0); }
+      }
+
+      .ico img {
+        border-radius: 6px;
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+        margin-left: 16px;
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      .ico img[alt="Stanford University Logo"] {
+        width: 40px;
+        height: 40px;
+      }
+
+      .ico img:hover {
+        transform: scale(1.1);
+      }
+
+      .ico img[alt="BITS Pilani Logo"] {
+        position: relative;
+      }
+
+      .ico img[alt="BITS Pilani Logo"]:hover::after {
+        content: '';
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.8);
+        width: 300px;
+        height: 300px;
+        background-image: url('https://media.licdn.com/dms/image/v2/D562DAQFQ5wvBeJmYEg/profile-treasury-image-shrink_1280_1280/B56ZYjW811GoAQ-/0/1744349942308?e=1750186800&v=beta&t=TlFNT2nmXKSWM9MhFOse0O833E5bIvsfLVFIafZ2Tpc');
+        background-size: cover;
+        border-radius: 50%;
+        border: 4px solid white;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        z-index: 1000;
+        opacity: 0;
+        animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+      }
+
+      @keyframes popIn {
+        0% { 
+          opacity: 0;
+          transform: translate(-50%, -50%) scale(0.5);
+        }
+        100% { 
+          opacity: 1;
+          transform: translate(-50%, -50%) scale(1);
+        }
+      }
+
+      .ico img[alt="BITS Pilani Logo"]:hover::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 999;
+        opacity: 0;
+        animation: fadeIn 0.3s ease forwards;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
       h1 {
-        font-size: 36px;
-        font-weight: 600;
+        font-size: 42px;
+        font-weight: 700;
         margin: 0;
         color: #1a202c;
         text-align: left;
+        letter-spacing: -0.02em;
+        line-height: 1.2;
       }
 
       h2 {
-        font-weight: normal;
+        font-weight: 400;
         font-style: italic;
         color: #4a5568;
-        font-size: 19px;
-        margin: 10px 0 14px;
+        font-size: 20px;
+        margin: 12px 0 16px;
         max-width: 340px;
-        line-height: 1.4;
+        line-height: 1.5;
         text-align: left;
+        letter-spacing: -0.01em;
       }
 
       #dico {
@@ -107,11 +205,12 @@
       }
 
       .about-content {
-        font-size: 1rem;
+        font-size: 17px;
         color: #4a5568;
         padding: 1.5rem 0;
-        line-height: 1.7;
+        line-height: 1.8;
         text-align: center;
+        letter-spacing: -0.01em;
       }
 
       .about-fantasy {
@@ -149,12 +248,6 @@
         margin-left: 4px;
       }
 
-      .ico img {
-        border-radius: 6px;
-        width: 32px;
-        margin-left: 16px;
-      }
-
       .entry-dot {
         position: absolute;
         top: 0;
@@ -168,11 +261,12 @@
 
       .desc {
         grid-column: span 10;
-        font-size: 16px;
+        font-size: 17px;
         padding-left: 20px;
         padding-bottom: 20px;
         color: #2d3748;
         line-height: 1.7;
+        letter-spacing: -0.01em;
       }
 
       .desc a {
@@ -209,7 +303,8 @@
         .row {
           display: flex;
           flex-direction: column;
-          align-items: center;
+          align-items: flex-start;
+          width: 100%;
         }
 
         #dhead .row {
@@ -245,13 +340,18 @@
         }
 
         .timespan {
-          text-align: center;
+          text-align: left;
           padding-right: 0;
+          font-size: 14px;
+          margin-bottom: 4px;
         }
 
         .desc {
-          text-align: center;
+          text-align: left;
           padding-left: 0;
+          font-size: 15px;
+          line-height: 1.6;
+          margin-bottom: 24px;
         }
 
         .hassets {
@@ -259,17 +359,69 @@
         }
 
         .container {
-          padding: 0 16px;
+          padding: 0 20px;
+          max-width: 100%;
         }
 
         .entry {
           display: flex;
           flex-direction: column;
-          align-items: center;
+          align-items: flex-start;
+          width: 100%;
+          margin-bottom: 32px;
+          position: relative;
         }
 
         .ico {
           display: none;
+        }
+
+        .about-content {
+          font-size: 15px;
+          line-height: 1.6;
+          padding: 1rem 0;
+        }
+
+        .about-fantasy {
+          font-size: 15px;
+          line-height: 1.6;
+          margin-bottom: 1rem;
+          padding-bottom: 1rem;
+        }
+
+        .footer-note {
+          font-size: 13px;
+          margin: 32px 0;
+          padding: 0 10px;
+        }
+
+        /* Fix for the hover effect on mobile */
+        .ico img[alt="BITS Pilani Logo"]:hover::after {
+          width: 200px;
+          height: 200px;
+        }
+      }
+
+      /* Additional breakpoint for very small screens */
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 32px;
+        }
+
+        h2 {
+          font-size: 18px;
+        }
+
+        .container {
+          padding: 0 16px;
+        }
+
+        .timespan {
+          font-size: 13px;
+        }
+
+        .desc {
+          font-size: 14px;
         }
       }
 
@@ -300,8 +452,8 @@
           <img src="irfan.png.JPG" class="ppic" alt="Irfan Khan" />
         </div>
         <div id="ddesc">
-          <h1>Irfan Khan</h1>
-          <h2>Dropout, Atheist, Making Superintelligence / Harry AI</h2>
+          <h1>irfan khan</h1>
+          <h2>dropout, atheist, making superintelligence / harry ai</h2>
           <div id="dico">
             <a href="https://www.linkedin.com/in/irrfaansaul" aria-label="LinkedIn Profile">
               <img src="https://i.pinimg.com/564x/6b/ab/30/6bab3017350ca04c6fa05569672bd31e.jpg" class="iico" alt="LinkedIn" />
@@ -319,7 +471,7 @@
     <div class="about-section">
       <div class="about-content">
         <div class="about-fantasy">
-          Doing what I love doing everyday, wrote my first working code at 14, a spacecraft game built with Cocos2D (full of bugs), but hey, that was the best feeling ever. Grew up in a Jewish/Muslim family, so dinner table conversations were always exciting.
+          doing what i love doing everyday, wrote my first working code at 14, a spacecraft game built with cocos2d (full of bugs), but hey, that was the best feeling ever. grew up in a jewish/muslim family, so dinner table conversations were always interesting.
         </div>
       </div>
     </div>
@@ -331,7 +483,7 @@
           <div class="entry-dot"></div>
         </div>
         <div class="desc">
-          Building Harry AI (Making Superintelligence).
+          building harry ai (making superintelligence).
         </div>
       </div>
 
@@ -339,10 +491,11 @@
         <div class="timespan">2023 - 2024</div>
         <div class="ico">
           <div class="entry-dot"></div>
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/BITS_Pilani-Logo.svg/1200px-BITS_Pilani-Logo.svg.png" alt="BITS Pilani Logo" style="width: 32px; margin-right: 8px;"/>
           <img src="https://identity.stanford.edu/wp-content/uploads/sites/3/2020/07/block-s-right.png" alt="Stanford University Logo"/>
         </div>
         <div class="desc">
-          Was at bits pilani in 2023 for bsc. in cs but dropped out after the 1st sem to work on <a href="https://www.camko.in/">Camko</a> (prev. Reprice) and explore things; got into stanford in 2024 for bs in cs but decided to work on Harry AI.
+          was at bits pilani in 2023 for bsc (2023ebcs124) in cs but dropped out after the 1st sem to work on <a href="https://www.camko.in/">camko</a> (prev. reprice) and explore things; got into stanford in 2024 for bs in cs but decided to work on harry ai.
         </div>
       </div>
 
@@ -350,10 +503,10 @@
         <div class="timespan">2021 - 2024</div>
         <div class="ico">
           <div class="entry-dot"></div>
-          <img src="https://www.circlemarket.in/images/logo.png" alt="Circle Market Logo"/>
+          <img src="https://www.camko.in/images/logo.png" alt="Circle Market Logo"/>
         </div>
         <div class="desc">
-          Started <a href="https://www.camko.in/">Camko</a> (prev. Reprice), a re-commerce platform to sell used gadgets instantly across India. Started when I was 16, did some crazy revenue, but recently closed due to declining profit margins.
+          started <a href="https://www.camko.in/">camko</a> (prev. reprice), a re-commerce platform to sell used gadgets instantly across india. started when i was 16, did some crazy revenue, but recently closed due to declining profit margins.
         </div>
       </div>
 
@@ -364,7 +517,7 @@
           <img src="https://media.istockphoto.com/id/1373671767/vector/autopilot-icon-simple-element-illustration-autopilot-symbol-design-from-artificial.jpg?s=612x612&w=0&k=20&c=DzMuRemEV45K1tKzGd1a_mvifyLoOfrxlN3BRqUJEP8=" alt="Autopilot Icon"/>
         </div>
         <div class="desc">
-          Worked on a few autonomous vision projects.
+          worked on a few autonomous vision projects.
           <div class="hassets">
             <div class="hasset">
               <video controls preload="metadata" muted loop playsinline class="video">
@@ -381,7 +534,7 @@
           <div class="entry-dot"></div>
         </div>
         <div class="desc">
-          Back in school, worked as a stockbroker & opened Demat accounts to fund my expenses.
+          back in school, worked as a stockbroker & opened demat accounts to fund my expenses.
         </div>
       </div>
 
@@ -392,7 +545,7 @@
           <img src="https://sophiahighschool.org/images/logo2.png" alt="Sophia School Logo"/>
         </div>
         <div class="desc">
-          K12 - Sophia School.
+          k12 - sophia school.
         </div>
       </div>
     </div>
@@ -401,7 +554,7 @@
 
     <div class="container">
       <p class="footer-note">
-        No frameworks were used to make this simple responsive website because I am becoming seriously allergic to <a href="https://motherfuckingwebsite.com/">500-pound websites</a>. This one is pure HTML and CSS in a single file and that's it.
+        no frameworks were used to make this simple responsive website because i am becoming seriously allergic to <a href="https://motherfuckingwebsite.com/">500-pound websites</a>. this one is pure html and css in a single file and that's it.
       </p>
     </div>
   </body>
